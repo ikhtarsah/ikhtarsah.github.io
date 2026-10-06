@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اختار صح | اختار بذكاء قبل ما تشتري</title>
+  <meta name="description" content="اختار صح - مراجعات ومقارنات منتجات تساعدك على اختيار الأفضل قبل الشراء.">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,Tahoma,sans-serif;background:#f6f7f9;color:#171717;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1100px,92%);margin:auto}
+    header{background:#fff;border-bottom:1px solid #e8e8e8;position:sticky;top:0;z-index:10}
+    .nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{font-size:25px;font-weight:900;color:#111}
+    .logo span{display:inline-block;background:#f5c400;padding:3px 8px;border-radius:9px}
+    nav{display:flex;gap:22px;font-size:14px;font-weight:700}
+    .menu{display:none;font-size:25px;background:none;border:0}
+    .hero{padding:65px 0 45px;background:linear-gradient(135deg,#fff 0%,#fff9df 100%)}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+    .tag{display:inline-block;background:#fff1a8;padding:7px 12px;border-radius:30px;font-size:13px;font-weight:700;margin-bottom:15px}
+    h1{font-size:clamp(38px,6vw,64px);line-height:1.05;margin-bottom:18px}
+    h1 span{color:#d69f00}
+    .hero p{font-size:18px;color:#555;max-width:600px;margin-bottom:25px}
+    .search{display:flex;background:#fff;border:1px solid #ddd;border-radius:15px;padding:6px;box-shadow:0 8px 25px #0000000d}
+    .search input{flex:1;border:0;outline:0;padding:13px;font-size:15px;background:transparent}
+    .search button{border:0;background:#111;color:#fff;border-radius:11px;padding:0 20px;font-weight:700;cursor:pointer}
+    .hero-card{background:#111;color:#fff;border-radius:25px;padding:28px;min-height:270px;display:flex;flex-direction:column;justify-content:center}
+    .hero-card .icon{font-size:60px;margin-bottom:12px}
+    .hero-card h2{font-size:25px;margin-bottom:8px}
+    .hero-card p{color:#ccc;font-size:14px;margin:0}
+    section{padding:48px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:22px}
+    .section-head h2{font-size:28px}
+    .section-head p{color:#777;font-size:14px}
+    .categories{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .category{background:#fff;border:1px solid #eee;border-radius:18px;padding:22px;text-align:center;transition:.2s}
+    .category:hover{transform:translateY(-3px);box-shadow:0 10px 25px #0000000a}
+    .category .emoji{font-size:36px;display:block;margin-bottom:8px}
+    .category b{font-size:16px}
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .product{background:#fff;border:1px solid #eee;border-radius:20px;overflow:hidden}
+    .product-img{height:190px;background:#eef0f3;display:flex;align-items:center;justify-content:center;font-size:70px}
+    .product-body{padding:18px}
+    .stars{font-size:13px;margin-bottom:7px}
+    .product h3{font-size:18px;margin-bottom:8px}
+    .product p{font-size:13px;color:#666;margin-bottom:14px}
+    .price{font-size:18px;font-weight:900;margin-bottom:13px}
+    .btn{display:block;text-align:center;background:#111;color:#fff;padding:12px;border-radius:11px;font-weight:700}
+    .btn:hover{background:#2c2c2c}
+    .compare{background:#111;color:#fff;border-radius:25px;padding:35px}
+    .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}
+    .compare p{color:#ccc;margin:8px 0 18px}
+    .compare .btn{background:#f5c400;color:#111;width:max-content;padding:11px 20px}
+    footer{background:#111;color:#fff;padding:35px 0;margin-top:20px}
+    footer p{color:#aaa;font-size:13px}
+    .empty{grid-column:1/-1;text-align:center;padding:30px;color:#777;background:#fff;border-radius:15px}
+    @media(max-width:800px){
+      nav{display:none}.menu{display:block}
+      .hero{padding:45px 0 35px}.hero-grid{grid-template-columns:1fr}
+      .hero-card{min-height:220px}
+      .categories{grid-template-columns:repeat(2,1fr)}
+      .products{grid-template-columns:1fr}
+      .compare-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:450px){
+      .nav{height:62px}.logo{font-size:21px}
+      h1{font-size:42px}.hero p{font-size:16px}
+      .categories{gap:10px}.category{padding:17px 10px}
+      .search button{padding:0 14px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#">اختار <span>صح</span></a>
+    <nav>
+      <a href="#categories">الأقسام</a>
+      <a href="#best">الأفضل</a>
+      <a href="#compare">المقارنات</a>
+    </nav>
+    <button class="menu" aria-label="القائمة">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="tag">⭐ اختيارات أذكى</span>
+        <h1>اختار <span>صح</span><br>قبل ما تشتري</h1>
+        <p>نساعدك تكتشف المنتجات المفيدة، تقارن بينها، وتعرف ماذا يستحق الشراء قبل أن تدفع.</p>
+        <form class="search" id="searchForm">
+          <input id="searchInput" type="search" placeholder="ابحث عن سماعة، مايك، شاحن..." aria-label="بحث">
+          <button type="submit">بحث</button>
+        </form>
+      </div>
+      <div class="hero-card">
+        <div class="icon">🎯</div>
+        <h2>لا تشتري قبل أن تقارن</h2>
+        <p>مراجعات مختصرة، مميزات وعيوب، ومقارنات تساعدك على اتخاذ القرار.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="categories">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>تصفح الأقسام</h2>
+          <p>ابدأ من المجال الذي تبحث عنه</p>
+        </div>
+      </div>
+      <div class="categories">
+        <a class="category" href="#"><span class="emoji">🎧</span><b>السماعات</b></a>
+        <a class="category" href="#"><span class="emoji">📱</span><b>إكسسوارات الهاتف</b></a>
+        <a class="category" href="#"><span class="emoji">🎙️</span><b>معدات صناعة المحتوى</b></a>
+        <a class="category" href="#"><span class="emoji">🔌</span><b>الشواحن والكابلات</b></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="best">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>🔥 اختياراتنا اليوم</h2>
+          <p>نماذج تجريبية — سنستبدلها بمنتجات أفلييت حقيقية</p>
+        </div>
+      </div>
+      <div class="products" id="products">
+        <article class="product" data-name="مايكروفون لاسلكي USB-C مايك صناعة المحتوى">
+          <div class="product-img">🎙️</div>
+          <div class="product-body">
+            <div class="stars">★★★★★ 4.7</div>
+            <h3>مايكروفون لاسلكي USB-C</h3>
+            <p>مناسب للفيديوهات وصناعة المحتوى من الهاتف.</p>
+            <div class="price">السعر: يُحدَّث لاحقًا</div>
+            <a class="btn" href="#" onclick="alert('سنضع هنا رابط الأفلييت بعد اعتماد المنتج.');return false;">شاهد المنتج</a>
+          </div>
+        </article>
+
+        <article class="product" data-name="سماعة بلوتوث لاسلكية">
+          <div class="product-img">🎧</div>
+          <div class="product-body">
+            <div class="stars">★★★★☆ 4.5</div>
+            <h3>سماعة بلوتوث لاسلكية</h3>
+            <p>خيار اقتصادي للاستخدام اليومي.</p>
+            <div class="price">السعر: يُحدَّث لاحقًا</div>
+            <a class="btn" href="#" onclick="alert('سنضع هنا رابط الأفلييت بعد اعتماد المنتج.');return false;">شاهد المنتج</a>
+          </div>
+        </article>
+
+        <article class="product" data-name="شاحن سريع USB-C">
+          <div class="product-img">🔌</div>
+          <div class="product-body">
+            <div class="stars">★★★★★ 4.8</div>
+            <h3>شاحن سريع USB-C</h3>
+            <p>منتج عملي يحتاجه معظم مستخدمي الهواتف.</p>
+            <div class="price">السعر: يُحدَّث لاحقًا</div>
+            <a class="btn" href="#" onclick="alert('سنضع هنا رابط الأفلييت بعد اعتماد المنتج.');return false;">شاهد المنتج</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="compare">
+    <div class="container">
+      <div class="compare">
+        <div class="compare-grid">
+          <div>
+            <h2>🆚 قارن قبل أن تشتري</h2>
+            <p>سنضيف لاحقًا أداة مقارنة تعرض السعر، التقييم، المميزات والعيوب لكل منتج.</p>
+            <a class="btn" href="#">شاهد المقارنات</a>
+          </div>
+          <div style="font-size:75px;text-align:center">⚖️</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="logo">اختار <span>صح</span></div>
+    <p>اختار بذكاء قبل ما تشتري — هذا الموقع في نسخته التجريبية الأولى.</p>
+  </div>
+</footer>
+
+<script>
+  const form = document.getElementById('searchForm');
+  const input = document.getElementById('searchInput');
+  const products = [...document.querySelectorAll('.product')];
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const q = input.value.trim().toLowerCase();
+    let found = 0;
+    products.forEach(card => {
+      const match = !q || card.dataset.name.toLowerCase().includes(q);
+      card.style.display = match ? '' : 'none';
+      if(match) found++;
+    });
+    document.getElementById('best').scrollIntoView({behavior:'smooth'});
+    if(q && !found) alert('لم نجد منتجًا مطابقًا حاليًا. سنضيف المزيد قريبًا.');
+  });
+</script>
+
+</body>
+</html>
